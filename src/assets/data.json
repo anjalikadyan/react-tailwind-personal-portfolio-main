@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "title": "Sports Management System",
+      "date": "Nov’ 25 – Dec’ 25",
+      "description": "Developed a full-stack Sports Management System using React, Node.js, Express, and MongoDB to manage tournaments, teams, matches, and player statistics. Implemented JWT-based authentication and role-based access control (Super Admin, Coach, Player) with secure restful APIs. Designed responsive dashboards and team management features with modern UI/UX and structured MVC architecture for scalability.",
+      "github": "https://github.com/anjalikadyan/sports-managment-main",
+      "live": "https://sports-management-demo.vercel.app/"
+    },
+    {
+      "title": "Tours & Travel Packages App",
+      "date": "July’ 25 – Aug’ 25",
+      "description": "Created a React-based travel booking application with dynamic tour listing, API data fetching, card removal, and smooth UI interactions. Implemented state management, reusable components, and conditional rendering for improved user experience. Increased usability by enabling quick tour browsing and lightweight client-side interaction.",
+      "github": "https://github.com/anjalikadyan/tour-and-traveling-website",
+      "live": "https://tours-travel-demo.vercel.app/"
+    },
+    {
+      "title": "Training Center Management System",
+      "date": "Apr’ 25 – Jun’ 25",
+      "description": "Developed a full-stack training management platform featuring course catalog, student enrollment, assignment uploads, and role-based dashboards. Integrated secure user authentication and streamlined course/assignment workflows for efficient training operations. Enhanced admin productivity by simplifying course management and reducing manual coordination efforts.",
+      "github": "https://github.com/anjalikadyan/training-management-project",
+      "live": "https://training-mgmt-demo.vercel.app/"
+    },
+    {
+      "title": "E-Commerce Platform",
+      "date": "Jan’ 26 – Feb’ 26",
+      "description": "A comprehensive MERN stack e-commerce application with features like product filtering, shopping cart, secure checkout, and user reviews. Integrated Stripe for payments and Cloudinary for image hosting. Developed an admin panel for inventory management and order tracking.",
+      "github": "https://github.com/anjalikadyan/mern-ecommerce",
+      "live": "https://ecommerce-demo.vercel.app/"
+    },
+    {
+      "title": "AI Image Generator",
+      "date": "Dec’ 25 – Jan’ 26",
+      "description": "Built an AI-powered image generation tool using OpenAI's DALL-E API. Users can generate high-quality images from text prompts and share them with the community. Features include a masonry layout for image display and seamless integration with MongoDB for storing image metadata.",
+      "github": "https://github.com/anjalikadyan/ai-image-gen",
+      "live": "https://ai-image-demo.vercel.app/"
+    },
+    {
+      "title": "Real-time Chat Application",
+      "date": "Oct’ 25 – Nov’ 25",
+      "description": "A real-time messaging app built with React and Socket.io. Supports private messaging, group chats, and real-time notifications. Implemented user presence tracking and message history storage using MongoDB. Designed a clean, responsive interface inspired by modern chat platforms.",
+      "github": "https://github.com/anjalikadyan/chat-app-live",
+      "live": "https://chat-demo.vercel.app/"
+    },
+    {
+      "title": "Portfolio Website v1",
+      "date": "Sept’ 25 – Oct’ 25",
+      "description": "My first professional portfolio built with React and Framer Motion. Showcases projects, skills, and certifications with smooth scroll animations and a responsive design. Includes a custom-built contact form integrated with EmailJS for direct communication.",
+      "github": "https://github.com/anjalikadyan/portfolio-v1",
+      "live": "https://portfolio-v1-demo.vercel.app/"
+    },
+    {
+      "title": "Weather Dashboard",
+      "date": "Aug’ 25 – Sept’ 25",
+      "description": "A dynamic weather application using the OpenWeatherMap API. Provides real-time weather updates, 5-day forecasts, and location-based weather tracking. Features interactive charts for temperature trends and a responsive design for all devices.",
+      "github": "https://github.com/anjalikadyan/weather-app",
+      "live": "https://weather-demo.vercel.app/"
+    },
+    {
+      "title": "Task Management Tool",
+      "date": "Jun’ 25 – July’ 25",
+      "description": "A productivity tool for managing daily tasks and projects. Features include drag-and-drop task boards, priority levels, and deadline tracking. Built with React and Firebase for real-time data synchronization and user authentication.",
+      "github": "https://github.com/anjalikadyan/task-manager",
+      "live": "https://task-demo.vercel.app/"
+    }
+  ]
+}

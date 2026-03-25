@@ -7,12 +7,36 @@ import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import cvFile from "../assets/AnjaliCV-new.pdf";
 import profilePhoto from "../assets/add.jpeg";
 
+const dots = Array.from({ length: 20 }, () => ({
+  left: Math.random() * 100,
+  top: Math.random() * 100,
+  duration: 10 + Math.random() * 15,
+  delay: Math.random() * 5,
+}));
+
 export const Hero = () => {
   return (
     <section className="relative min-h-[70vh] flex items-center overflow-hidden">
       {/* Bg */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-linear-to-b from-primary/10 via-background/80 to-background" />
+      </div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {dots.map((dot, index) => (
+          <div
+            key={index}
+            className="absolute w-1 h-1 rounded-full opacity-40"
+            style={{
+              backgroundColor: "var(--color-primary)",
+              left: `${dot.left}%`,
+              top: `${dot.top}%`,
+              animation: `slow-drift ${dot.duration}s ease-in-out infinite`,
+              animationDelay: `${dot.delay}s`,
+            }}
+          />
+        ))}
       </div>
 
       {/* Content */}
@@ -52,7 +76,7 @@ export const Hero = () => {
           {/* Right Column - Profile Image */}
           <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-xs mx-auto animate-float">
               <div
                 className="absolute inset-0 
               rounded-3xl bg-linear-to-br 

@@ -27,7 +27,7 @@ export const Projects = () => {
         
         // Transform GitHub repo data to match our project structure
         const transformedProjects = repos
-          .filter(repo => !repo.fork) // Exclude forks
+          .filter(repo => !repo.fork && repo.name.toLowerCase() !== "certifications") // Exclude forks and certifications repo
           .map((repo) => ({
             title: repo.name.replace(/-/g, " ").replace(/_/g, " "),
             description: repo.description || "A project built with passion and modern technologies. Check out the code to see the implementation details.",

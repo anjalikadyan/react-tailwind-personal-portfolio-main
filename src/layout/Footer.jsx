@@ -3,7 +3,6 @@ import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 const socialLinks = [
   { icon: Github, href: "https://github.com/anjalikadyan", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/anjali-kadyan-070274248/", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
 ];
 
 const footerLinks = [

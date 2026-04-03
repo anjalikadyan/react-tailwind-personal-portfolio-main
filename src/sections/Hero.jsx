@@ -76,7 +76,7 @@ export const Hero = () => {
           {/* Right Column - Profile Image */}
           <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
-            <div className="relative max-w-xs mx-auto animate-float">
+            <div className="relative max-w-[280px] mx-auto animate-float">
               <div
                 className="absolute inset-0 
               rounded-3xl bg-linear-to-br 

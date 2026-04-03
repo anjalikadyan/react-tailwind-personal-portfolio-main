@@ -1,4 +1,5 @@
-import { Calendar, Award, BookOpen, Download } from "lucide-react";
+import { Calendar, Award, BookOpen, Download, X } from "lucide-react";
+import { useState } from "react";
 import cert5 from "../assets/certification/5.png";
 
 const trainingPrograms = [
@@ -9,12 +10,14 @@ const trainingPrograms = [
     description: "Performed data cleaning, preprocessing, and transformation to prepare datasets for accurate analysis and visualization. Conducted exploratory data analysis (EDA) on retail sales data to uncover trends, customer behavior patterns, and business insights. Designed and developed interactive dashboards to support data-driven decision making and improve insight communication.",
     icon: BookOpen,
     skills: ["Data Analysis", "Data Visualization", "EDA", "Dashboard Design"],
-    certificateLink: "https://drive.google.com/file/d/1Q_6UYlphJ1OC0OmboLIZ0FE3-f_PBKgE/view?usp=sharing",
+    certificateLink: "https://lh3.googleusercontent.com/d/1Q_6UYlphJ1OC0OmboLIZ0FE3-f_PBKgE=s1000",
     image: cert5
   }
 ];
 
 export const Training = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <section id="training" className="py-20 relative overflow-hidden">
       <div
@@ -52,7 +55,7 @@ export const Training = () => {
               style={{ animationDelay: `${(idx + 1) * 150}ms` }}
             >
               <div className="flex flex-col md:flex-row items-start gap-8">
-                <div className="relative w-full md:w-48 aspect-video rounded-2xl overflow-hidden shrink-0 border border-primary/20">
+                <div className="relative w-full md:w-48 aspect-video rounded-2xl overflow-hidden shrink-0 border border-primary/20 cursor-pointer" onClick={() => setSelectedImage(program.certificateLink)}>
                   <img 
                     src={program.image} 
                     alt={program.title} 
@@ -93,21 +96,47 @@ export const Training = () => {
                   </div>
                   
                   {/* Certificate Button */}
-                  <a
-                    href={program.certificateLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => setSelectedImage(program.certificateLink)}
                     className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-xl transition-all duration-300 border border-primary/30 hover:border-transparent font-medium"
                   >
-                    <Download className="w-4 h-4" />
+                    <Award className="w-5 h-5" />
                     View Certificate
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 animate-fade-in"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="absolute inset-0 bg-background/90 backdrop-blur-md" />
+          
+          <button 
+            className="absolute top-6 right-6 p-2 rounded-full glass hover:bg-primary/20 text-white transition-all z-[110]"
+            onClick={() => setSelectedImage(null)}
+          >
+            <X className="w-8 h-8" />
+          </button>
+
+          <div 
+            className="relative max-w-5xl w-full h-full flex items-center justify-center z-[105]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={selectedImage} 
+              alt="Training Certificate Full View" 
+              className="max-w-full max-h-full object-contain rounded-xl shadow-2xl animate-float"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
